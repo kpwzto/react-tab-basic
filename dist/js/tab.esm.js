@@ -837,12 +837,13 @@ var NavLink = class extends React4.Component {
     super(props);
   }
   render() {
+    const className = `${this.props.variant} ${this.props.isActive ? "active" : ""}`;
     return /* @__PURE__ */ React4.createElement(TabsContext.Consumer, null, ({ setTabContextId }) => {
       return /* @__PURE__ */ React4.createElement("div", {
         onClick: () => {
           setTabContextId(this.props.activeKey);
         },
-        className: this.props.isActive ? "active" : ""
+        className
       }, this.props.children);
     });
   }
@@ -941,7 +942,7 @@ var propTypes2 = {
   children: import_prop_types2.default.any
 };
 var defaultProps2 = {
-  variant: "tab-content",
+  variant: "tab-head",
   children: null
 };
 var Tab = ({ children }) => {

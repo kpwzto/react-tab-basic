@@ -21,7 +21,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  variant: 'tab-content',
+  variant: 'tab-head',
   children: null,
 }
 

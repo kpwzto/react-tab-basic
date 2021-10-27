@@ -4,6 +4,7 @@ interface INavLink {
   children?: any
   isActive: boolean
   activeKey: string
+  variant?: string
 }
 
 class NavLink extends React.Component<INavLink> {
@@ -12,6 +13,9 @@ class NavLink extends React.Component<INavLink> {
     super(props)
   }
   render(): JSX.Element {
+    const className = `${this.props.variant} ${
+      this.props.isActive ? 'active' : ''
+    }`
     return (
       <TabsContext.Consumer>
         {({ setTabContextId }) => {
@@ -20,7 +24,7 @@ class NavLink extends React.Component<INavLink> {
               onClick={() => {
                 setTabContextId(this.props.activeKey)
               }}
-              className={this.props.isActive ? 'active' : ''}
+              className={className}
             >
               {this.props.children}
             </div>

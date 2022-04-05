@@ -26,6 +26,17 @@ And render them like this:
   </Tab>
 </Tabs>
 ```
+Attribute:
+```javascript
+<Tabs defaultActiveKey="tab1">
+  <Tab activeKey="tab1" title="Tab 1" variant="Class name for tab head">
+    <Component />
+  </Tab>
+  <Tab activeKey="tab2" title="Tab 2" contentClassName="Class name for content">
+    <Component />
+  </Tab>
+</Tabs>
+```
 ## License
 React tab basic are released under the MIT license.
 © kpwzto

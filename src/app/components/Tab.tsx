@@ -17,11 +17,13 @@ const propTypes = {
    * custom css class
    */
   variant: PropTypes.string,
+  contentClassName: PropTypes.string,
   children: PropTypes.any,
 }
 
 const defaultProps = {
   variant: 'tab-head',
+  contentClassName: 'tab-content',
   children: null,
 }
 

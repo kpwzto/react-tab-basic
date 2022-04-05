@@ -7,10 +7,12 @@ export declare const Tab: {
         title: PropTypes.Validator<string>;
         activeKey: PropTypes.Validator<string | number>;
         variant: PropTypes.Requireable<string>;
+        contentClassName: PropTypes.Requireable<string>;
         children: PropTypes.Requireable<any>;
     };
     defaultProps: {
         variant: string;
+        contentClassName: string;
         children: null;
     };
     displayName: string;

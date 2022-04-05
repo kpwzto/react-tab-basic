@@ -3,6 +3,7 @@ interface INavLink {
     children?: any;
     isActive: boolean;
     activeKey: string;
+    variant?: string;
 }
 declare class NavLink extends React.Component<INavLink> {
     static contextType: React.Context<{
@@ -10,7 +11,6 @@ declare class NavLink extends React.Component<INavLink> {
         setTabContextId: (tabId: string) => string;
     }>;
     constructor(props: INavLink);
-    handleClick(): void;
     render(): JSX.Element;
 }
 export default NavLink;

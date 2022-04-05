@@ -2,15 +2,15 @@ import React from 'react'
 interface ITabContent {
   isActive: boolean
   children?: any
-  variant?: string
+  contentClassName?: string
 }
 const TabContent = ({
   isActive,
   children,
-  variant,
+  contentClassName
 }: ITabContent): JSX.Element => {
   return (
-    <div className={variant} style={{ display: isActive ? 'block' : 'none' }}>
+    <div className={contentClassName} style={{ display: isActive ? 'block' : 'none' }}>
       {children}
     </div>
   )

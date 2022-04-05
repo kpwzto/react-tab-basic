@@ -865,10 +865,10 @@ import React6 from "react";
 var TabContent = ({
   isActive,
   children,
-  variant
+  contentClassName
 }) => {
   return /* @__PURE__ */ React6.createElement("div", {
-    className: variant,
+    className: contentClassName,
     style: { display: isActive ? "block" : "none" }
   }, children);
 };
@@ -939,10 +939,12 @@ var propTypes2 = {
   title: import_prop_types2.default.string.isRequired,
   activeKey: import_prop_types2.default.oneOfType([import_prop_types2.default.string, import_prop_types2.default.number]).isRequired,
   variant: import_prop_types2.default.string,
+  contentClassName: import_prop_types2.default.string,
   children: import_prop_types2.default.any
 };
 var defaultProps2 = {
   variant: "tab-head",
+  contentClassName: "tab-content",
   children: null
 };
 var Tab = ({ children }) => {
